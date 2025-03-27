@@ -1,0 +1,34 @@
+/*Create Methods add,sub in class calculator
+   Get two numbers from user input and store the values
+   Call the methods by creating an object*/
+import java.util.Scanner;
+   class Calculator{
+      //method to add 2 integers
+      int add(int num1, int num2){
+         return num1+num2;
+      }
+
+      //method to subtract 2 integers
+      int sub(int num1, int num2){
+         int subValue = num1 - num2;
+         return subValue;
+      }
+
+      public static void main(String args[]){
+         //Create Scanner obj
+         Scanner sc = new Scanner(System.in);
+         //Get user input of 2 integers
+         System.out.println("Enter integer 01: ");
+         int int_01 = sc.nextInt();
+         System.out.println("Enter integer 02: ");
+         int int_02 = sc.nextInt();
+
+         //Create a Calculator object.
+         Calculator obj = new Calculator();
+         //call method add()
+         System.out.println("The sum of "+int_01+ " & "+ int_02+": "+obj.add(int_01, int_02));
+         //call method sub()
+         System.out.println("The subtraction of "+int_01+ " & "+ int_02+": "+obj.sub(int_01, int_02));
+      }  
+   }
+ 
